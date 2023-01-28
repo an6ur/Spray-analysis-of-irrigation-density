@@ -1,0 +1,142 @@
+object Form1: TForm1
+  Left = 382
+  Top = 276
+  BorderStyle = bsSingle
+  Caption = #1040#1085#1072#1083#1080#1079' '#1088#1072#1089#1087#1088#1077#1076#1077#1083#1077#1085#1080#1103'  '#1087#1083#1086#1090#1085#1086#1089#1090#1080' '#1086#1088#1086#1096#1077#1085#1080#1103
+  ClientHeight = 266
+  ClientWidth = 553
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image1: TImage
+    Left = 0
+    Top = 0
+    Width = 553
+    Height = 270
+    AutoSize = True
+    Proportional = True
+    Stretch = True
+    Visible = False
+    OnDblClick = Image1DblClick
+    OnMouseDown = Image1MouseDown
+  end
+  object Label1: TLabel
+    Left = 48
+    Top = 24
+    Width = 49
+    Height = 17
+    AutoSize = False
+    Caption = 'Label1'
+    Color = clYellow
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object Chart1: TChart
+    Left = 0
+    Top = 0
+    Width = 553
+    Height = 247
+    BackWall.Brush.Color = clWhite
+    BackWall.Brush.Style = bsClear
+    Title.Text.Strings = (
+      #1055#1083#1086#1090#1085#1086#1089#1090#1100' '#1086#1088#1086#1096#1077#1085#1080#1103' w(x, y)')
+    BottomAxis.Automatic = False
+    BottomAxis.AutomaticMaximum = False
+    BottomAxis.AutomaticMinimum = False
+    BottomAxis.Maximum = 25
+    BottomAxis.Title.Caption = 'x'
+    LeftAxis.Automatic = False
+    LeftAxis.AutomaticMaximum = False
+    LeftAxis.AutomaticMinimum = False
+    LeftAxis.Maximum = 300
+    LeftAxis.Minimum = 11
+    LeftAxis.Title.Caption = 'y'
+    Legend.Visible = False
+    TopAxis.Automatic = False
+    TopAxis.AutomaticMaximum = False
+    TopAxis.AutomaticMinimum = False
+    View3D = False
+    Align = alClient
+    Color = clWhite
+    TabOrder = 0
+    object Series1: TAreaSeries
+      Marks.ArrowLength = 20
+      Marks.Visible = False
+      SeriesColor = 16744448
+      AreaLinesPen.Visible = False
+      DrawArea = True
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      Pointer.Visible = False
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1
+      YValues.Order = loNone
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 247
+    Width = 553
+    Height = 19
+    Panels = <>
+    SimplePanel = False
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Filter = 
+      'All (*.jpg;*.jpeg;*.bmp;*.ico;*.emf;*.wmf)|*.jpg;*.jpeg;*.bmp;*.' +
+      'ico;*.emf;*.wmf;*.png|JPEG Image File (*.jpg)|*.jpg|JPEG Image F' +
+      'ile (*.jpeg)|*.jpeg|Bitmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|En' +
+      'hanced Metafiles (*.emf)|*.emf|Metafiles (*.wmf)|*.wmf'
+    Left = 240
+    Top = 152
+  end
+  object MainMenu1: TMainMenu
+    Left = 272
+    Top = 152
+    object A1: TMenuItem
+      Caption = #1060#1072#1081#1083
+      object N1: TMenuItem
+        Caption = #1054#1090#1082#1088#1099#1090#1100
+        OnClick = N1Click
+      end
+      object N3: TMenuItem
+        Caption = #1042#1099#1093#1086#1076
+        OnClick = N3Click
+      end
+    end
+    object N4: TMenuItem
+      Caption = #1042#1099#1073#1086#1088' '#1089#1077#1095#1077#1085#1080#1103
+      OnClick = N4Click
+    end
+    object N2: TMenuItem
+      Caption = #1040#1085#1072#1083#1080#1079
+      OnClick = N2Click
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = Timer1Timer
+    Left = 304
+    Top = 152
+  end
+end
